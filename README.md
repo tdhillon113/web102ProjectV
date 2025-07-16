@@ -1,8 +1,8 @@
-
+TCG Pokemon Price Checker
 
 Submitted by: Trinity Dhillon
 
-This web app: Your super-simple tool to eat the way you want!
+This web app: A simple way to look into the prices of Pokemon Cards!
 
 Time spent: 8 hours spent in total
 
