@@ -1,9 +1,9 @@
-@import url("https://fonts.cdnfonts.com/css/pokemon-solid");
+@import url('https://fonts.cdnfonts.com/css/pokemon-solid');
 
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 32px;
+  padding: 2rem;
   text-align: center;
 }
 
@@ -18,6 +18,11 @@
   text-decoration: none;
   color: inherit;
   display: block;
+  transition: transform 0.2s ease;
+}
+
+.cardlink:hover {
+  transform: translateY(-2px);
 }
 
 * {
@@ -27,7 +32,7 @@
 }
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   background: linear-gradient(135deg, #3c5aa6 0%, #3c5aa6 100%);
   color: #333;
 }
@@ -41,12 +46,12 @@ body {
 .header {
   text-align: center;
   margin-bottom: 30px;
-  font-family: "Pokemon Solid";
+  font-family: 'Pokemon Solid';
   color: #c7a008;
 }
 
 .header h1 {
-  font-family: "Pokemon Solid", sans-serif;
+  font-family: 'Pokemon Solid', sans-serif;
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 10px;
@@ -70,18 +75,18 @@ body {
 }
 
 .statbox h3 {
-  font-size: 14.4px;
+  font-size: 0.9rem;
   color: #4a5568;
-  font-family: cursive;
+  font-family:cursive;
   font-weight: 700;
   margin-bottom: 5px;
   font-weight: 600;
 }
 
 .statbox p {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 700;
-  font-family: "Pokemon solid";
+  font-family: 'Pokemon solid';
   color: #2d3748;
   margin: 0;
 }
@@ -95,15 +100,12 @@ body {
   gap: 20px;
   align-items: center;
   flex-wrap: wrap;
-  border: none;
 }
 
 .searchcontainer {
   flex: 2;
+ 
   min-width: 200px;
-  border: none;
-  padding: 0;
-  margin: 0;
 }
 
 .searchinput {
@@ -111,7 +113,7 @@ body {
   padding: 12px 15px;
   border: 2px solid #ffffff;
   border-radius: 8px;
-  font-size: 16px;
+  font-size: 1rem;
   background: #b81c24;
 }
 
@@ -132,6 +134,11 @@ body {
   border-radius: 15px;
   padding: 20px;
   box-shadow: 0 10px 25px rgba(171, 55, 55, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.carditem:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1), 0 0 0 3px #ff0000;
 }
 
 .cardimage {
@@ -148,7 +155,7 @@ body {
 
 .cardname {
   text-align: center;
-  font-size: 20.8px;
+  font-size: 1.3rem;
   font-weight: 700;
   color: #2d3748;
   margin-bottom: 10px;
@@ -160,68 +167,37 @@ body {
   gap: 5px;
   margin-bottom: 15px;
   flex-wrap: wrap;
-  list-style: none;
-  padding: 0;
 }
 
 .type {
   padding: 4px 8px;
   border-radius: 12px;
-  font-size: 11.2px;
+  font-size: 0.7rem;
   font-weight: 600;
   color: white;
   text-transform: capitalize;
 }
 
-.type.grass {
-  background: #7ac74c;
-}
-.type.fire {
-  background: #ee8130;
-}
-.type.water {
-  background: #6390f0;
-}
-.type.lightning {
-  background: #f7d02c;
-}
-.type.electric {
-  background: #f7d02c;
-}
-.type.psychic {
-  background: #f95587;
-}
-.type.fighting {
-  background: #c22e28;
-}
-.type.darkness {
-  background: #705746;
-}
-.type.metal {
-  background: #b7b7ce;
-}
-.type.steel {
-  background: #b7b7ce;
-}
-.type.colorless {
-  background: #a8a77a;
-}
-.type.normal {
-  background: #a8a77a;
-}
-.type.fairy {
-  background: #d685ad;
-}
-.type.dragon {
-  background: #6f35fc;
-}
+.type.grass { background: #7AC74C; }
+.type.fire { background: #EE8130; }
+.type.water { background: #6390F0; }
+.type.lightning { background: #F7D02C; }
+.type.electric { background: #F7D02C; }
+.type.psychic { background: #F95587; }
+.type.fighting { background: #C22E28; }
+.type.darkness { background: #705746; }
+.type.metal { background: #B7B7CE; }
+.type.steel { background: #B7B7CE; }
+.type.colorless { background: #A8A77A; }
+.type.normal { background: #A8A77A; }
+.type.fairy { background: #D685AD; }
+.type.dragon { background: #6F35FC; }
 
 .cardstats {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 8px;
   margin-bottom: 15px;
-  margin: 0;
 }
 
 .statitem {
@@ -230,17 +206,12 @@ body {
   padding: 6px 10px;
   background: #f8f9fa;
   border-radius: 6px;
-  font-size: 14.4px;
+  font-size: 0.9rem;
   font-weight: 600;
 }
 
-.statitem dt {
-  font-weight: 600;
-}
-
-.statitem dd {
+.statitem span:last-child {
   color: #667eea;
-  margin: 0;
 }
 
 .carddescription {
@@ -248,7 +219,7 @@ body {
   padding: 10px;
   background: #f8f9fa;
   border-radius: 8px;
-  font-size: 13.6px;
+  font-size: 0.85rem;
   line-height: 1.4;
   color: #040508;
 }
@@ -256,29 +227,19 @@ body {
 .cardset {
   text-align: center;
   color: #6c757d;
-  font-size: 12.8px;
+  font-size: 0.8rem;
 }
+
 
 @media (max-width: 768px) {
-  .app {
-    padding: 15px;
-  }
-  .header h1 {
-    font-size: 32px;
-  }
-  .controls {
-    flex-direction: column;
-    align-items: stretch;
-  }
-  .cardsgrid {
-    grid-template-columns: 1fr;
-  }
-  .cardstats {
-    grid-template-columns: 1fr;
-  }
+  .app { padding: 15px; }
+  .header h1 { font-size: 2rem; }
+  .controls { flex-direction: column; align-items: stretch; }
+  .cardsgrid { grid-template-columns: 1fr; }
+  .cardstats { grid-template-columns: 1fr; }
 }
 
-
+/* Charts Styles */
 .chartscontainer {
   width: 100%;
   padding: 20px;
@@ -286,6 +247,21 @@ body {
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   margin: 20px 0;
+}
+
+.chartsplaceholder {
+  text-align: center;
+  padding: 40px 20px;
+  color: #666;
+  background: white;
+  border-radius: 10px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.chartsplaceholder h3 {
+  margin-bottom: 10px;
+  color: #555;
+  font-family: 'Pokemon Solid', Arial, sans-serif;
 }
 
 .chartsgrid {
@@ -300,14 +276,31 @@ body {
   border-radius: 15px;
   padding: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   background-clip: padding-box;
   position: relative;
   overflow: hidden;
 }
 
+.chartcard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #3c5aa6, #c7a008, #EE8130, #7AC74C);
+  z-index: 1;
+}
+
+.chartcard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
 .chartcard h3 {
   margin: 0 0 15px 0;
-  font-family: "Pokemon Solid", Arial, sans-serif;
+  font-family: 'Pokemon Solid', Arial, sans-serif;
   color: #3c5aa6;
   font-size: 1.3em;
   text-align: center;
@@ -324,24 +317,42 @@ body {
   min-height: 300px;
 }
 
+.chartdescription {
+  margin: 15px 0 0 0;
+  color: #666;
+  font-size: 0.9em;
+  line-height: 1.4;
+  text-align: center;
+  font-style: italic;
+  background: #f8f9fa;
+  padding: 10px;
+  border-radius: 8px;
+  border-left: 4px solid #3c5aa6;
+}
 
+/* Chart responsive design */
 @media (max-width: 768px) {
   .chartsgrid {
     grid-template-columns: 1fr;
     gap: 20px;
   }
-
+  
   .chartcard {
     padding: 15px;
   }
-
+  
   .chartwrapper {
     margin: 10px 0;
     min-height: 250px;
   }
-
+  
   .chartcard h3 {
     font-size: 1.1em;
+  }
+  
+  .chartdescription {
+    font-size: 0.8em;
+    padding: 8px;
   }
 }
 
@@ -350,21 +361,22 @@ body {
     padding: 15px;
     margin: 15px 0;
   }
-
+  
   .chartcard {
     padding: 12px;
   }
-
+  
   .chartwrapper {
     min-height: 200px;
   }
-
+  
   .chartcard h3 {
     font-size: 1em;
     margin-bottom: 10px;
   }
 }
 
+/* Chart-specific styling overrides */
 .chartcard .MuiChartsLegend-root {
   font-size: 0.8em !important;
 }
@@ -379,6 +391,8 @@ body {
   border-radius: 8px !important;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
 }
+
+/* CardDetail styles - moved from CardDetail.css */
 .detailcontainer {
   min-height: 100vh;
   background: linear-gradient(135deg, #3c5aa6 0%, #3c5aa6 100%);
@@ -394,6 +408,13 @@ body {
   margin-bottom: 30px;
   font-weight: 600;
   font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.backbutton:hover {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.9);
+  transform: translateY(-2px);
 }
 
 .detailcontent {
@@ -408,7 +429,7 @@ body {
 }
 
 .detailheader h1 {
-  font-family: "Pokemon Solid", sans-serif;
+  font-family: 'Pokemon Solid', sans-serif;
   font-size: 3rem;
   color: #c7a008;
   margin-bottom: 20px;
@@ -417,10 +438,23 @@ body {
 
 .detailgrid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 2fr;
   gap: 40px;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.detailimagesection {
+  text-align: center;
+}
+
+.detailimage {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px;
 }
 
 .detailinfosection {
@@ -431,7 +465,7 @@ body {
 
 .detailinfosection h3 {
   color: #3c5aa6;
-  font-family: "Pokemon Solid", sans-serif;
+  font-family: 'Pokemon Solid', sans-serif;
   margin-bottom: 15px;
   border-bottom: 2px solid #c7a008;
   padding-bottom: 5px;
@@ -441,33 +475,43 @@ body {
   padding: 10px;
   background: #f8f9fa;
   border-radius: 8px;
-  font-size: 14.4px;
+  font-size: 0.9rem;
   margin: 5px 0;
 }
 
-.searchinput:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
+.detailimagesection p {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 8px 15px;
+  border-radius: 10px;
+  text-align: left;
+  margin: 8px 0;
+  color: #333;
 }
 
-.resultsinfo p {
-  color: #c7a008;
-  font-weight: 500;
-  margin-top: 10px;
+.loading, .error {
+  text-align: center;
+  color: white;
+  font-size: 1.5rem;
+  padding: 60px;
 }
 
+.error {
+  color: #ff6b6b;
+}
+
+/* CardDetail responsive styles */
 @media (max-width: 768px) {
   .detailcontent {
     padding: 20px;
   }
-
+  
   .detailgrid {
     grid-template-columns: 1fr;
     gap: 20px;
   }
-
+  
   .detailheader h1 {
-    font-size: 32px;
+    font-size: 2rem;
   }
 }
 
@@ -475,9 +519,9 @@ body {
   .detailcontent {
     padding: 15px;
   }
-
+  
   .backbutton {
     padding: 12px 16px;
-    font-size: 16px;
+    font-size: 1rem;
   }
 }
